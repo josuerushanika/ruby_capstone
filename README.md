@@ -142,7 +142,6 @@ If you like this project please give me a Star!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGEMENTS -->
-
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 We would like to thank for Microverse to provide us learning materials, and our peers for helping us out to move forward.
