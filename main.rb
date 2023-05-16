@@ -17,30 +17,27 @@ class Main
   end
 
   def choices
+    menu_selection = {
+      '1' => :list_books,
+      '2' => :list_music_albums,
+      '3' => :list_movies,
+      '4' => :list_genres,
+      '5' => :list_labels,
+      '6' => :list_authors,
+      '7' => :list_sources,
+      '8' => :add_book,
+      '9' => :add_music_album,
+      '10' => :add_movie,
+      '0' => :exit
+    }
+
     loop do
-      input = numeric_input(menu_options, (0..10))
-      case input
-      when 1
-        list_books
-      when 2
-        list_music_albums
-      when 3
-        list_movies
-      when 4
-        list_genres
-      when 5
-        list_labels
-      when 6
-        list_authors
-      when 7
-        list_sources
-      when 8
-        add_book
-      when 9
-        add_music_album
-      when 10
-        add_movie
-      end
+      puts menu_options
+      input = gets.chomp
+      break unless menu_selection.key?(input)
+
+      action = menu_selection[input]
+      send(action) if action
     end
   end
 
