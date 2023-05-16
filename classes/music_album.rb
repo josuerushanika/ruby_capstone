@@ -10,6 +10,7 @@ class MusicAlbum < Item
 
   def can_be_archived?
     return false if @source != 'Spotify'
+
     super
   end
 end
