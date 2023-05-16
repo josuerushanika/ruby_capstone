@@ -11,10 +11,10 @@ class Item
 
   def can_be_archived?
     return false if @published_date.nil?
-
-    published_date = Date.parse(@published_date)
-    (Date.today.year - published_date.year) > 10
+  
+    Date.today.year - Date.parse(@published_date).year > 10
   end
+  
 
   def move_to_archive
     if can_be_archived?
