@@ -3,7 +3,7 @@ class Item
   attr_accessor :genre, :author, :source, :label, :published_date
 
   def initialize()
-    @id = rand(1..100)
+    @id = rand(1..300)
     @genre = genre
     @author = author
     @source = source
@@ -12,7 +12,7 @@ class Item
     @archived = false
   end
 
-  private :can_be_archived?
+  # private :can_be_archived?
 
   def can_be_archived?
     return false if @published_date.nil?

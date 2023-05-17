@@ -1,6 +1,8 @@
-require './item'
+require_relative '../classes/item'
+
 class Label < Item
-  attr_reader :id
+  attr_accessor :title, :color
+  attr_reader :id, :items
 
   def initialize(title, color)
     super()
@@ -10,13 +12,8 @@ class Label < Item
     @items = []
   end
 
-  def add_item(item)
-    @items.push(item)
-    item.label = self
-  end
-
-
-  private
-
-  attr_reader :items
+  #   def add_item(item)
+  #     @items.push(item)
+  #     item.label = self
+  #   end
 end
