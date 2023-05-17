@@ -2,7 +2,6 @@ require 'rspec'
 require_relative '../classes/book'
 require_relative '../classes/item'
 
-
 RSpec.describe Book do
   describe '#can_be_archived?' do
     context 'when cover_state is good' do
