@@ -4,6 +4,7 @@ require_relative './classes/item'
 require_relative './storage/store'
 require_relative './classes/music_album'
 require_relative './classes/genre'
+require 'date'
 
 class App
   def initialize
@@ -69,5 +70,16 @@ class App
     genre = gets.chomp
     @genre << Genre.new(genre)
     write_data(@genre, './storage/genre.json')
+  end
+
+  def add_music_album
+    puts 'Is music album available on spotify:[y/n]'
+    on_spotify = gets.chomp.downcase
+    on_spotify = on_spotify == 'y'
+    puts 'Enter year of publication for album: [yyyy/mm/dd]'
+    published_date = Date.parse(gets.chomp)
+    @music_album << MusicAlbum.new(on_spotify, published_date)
+    write_data(@music_album, './storage/music_albums.json')
+    puts 'You music album was created successfully'
   end
 end
