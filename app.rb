@@ -65,18 +65,12 @@ class App
     print 'Book added succesfully'
   end
 
-
-
-
-
   def create_genre
     puts 'Enter genre:'
     genre = gets.chomp
     @genre << Genre.new(genre)
     write_file(@genre, './storage/genre.json')
   end
-
-
 
   def add_music_album
     puts 'Is music album available on spotify: [y/n]'
@@ -92,11 +86,10 @@ class App
   def list_music_album
     @music_album = read_file('./storage/music_albums.json')
     @music_album.each do |album|
-      puts "Music_Album_ID: #{album['object_id']}  on_spotify: #{album['on_spotify']} publish_date; #{album['publish_date']}"
+      puts "Music_Album_ID: #{album['object_id']}  on_spotify:
+      #{album['on_spotify']} publish_date; #{album['publish_date']}"
     end
   end
-
-
 
   def list_genre
     @genre = read_file('./storage/genre.json')
@@ -104,5 +97,4 @@ class App
       puts "GenreID: #{genre['object_id']} genre_name: #{genre['name']}"
     end
   end
-  
 end

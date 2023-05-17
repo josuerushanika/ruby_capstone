@@ -27,7 +27,7 @@ class Main
       '5' => :list_labels, '6' => :list_authors,
       '7' => :list_sources, '8' => :add_book,
       '9' => :add_music_album, '10' => :add_movie,
-      '11' =>:create_genre,
+      '11' => :create_genre,
       '0' => :exit
     }
 
