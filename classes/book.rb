@@ -12,4 +12,12 @@ class Book < Item
   def can_be_archived?
     super == true || @cover_state == 'bad'
   end
+
+  def to_h
+    {
+      publisher: @publisher,
+      cover_state: @cover_state,
+      id: @id
+    }
+  end
 end

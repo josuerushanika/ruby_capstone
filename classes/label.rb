@@ -16,4 +16,13 @@ class Label < Item
   #     @items.push(item)
   #     item.label = self
   #   end
+
+  def to_h
+    {
+      title: @title,
+      color: @color,
+      id: @id,
+      items: @items
+    }
+  end
 end
