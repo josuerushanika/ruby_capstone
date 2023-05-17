@@ -4,7 +4,7 @@ require_relative './classes/item'
 require_relative './classes/music_album'
 require_relative './classes/genre'
 require_relative './classes/preserve_data'
-require_relative './classes/store'
+require_relative './storage/store'
 require 'date'
 
 class App
