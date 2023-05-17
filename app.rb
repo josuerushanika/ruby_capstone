@@ -73,29 +73,28 @@ class App
   end
 
   def add_music_album
-    puts 'Is music album available on spotify:[y/n]'
+    puts 'Is music album available on spotify: [y/n]'
     on_spotify = gets.chomp.downcase
     on_spotify = on_spotify == 'y'
-    puts 'Enter year of publication for album: [yyyy/mm/dd]'
-    published_date = Date.parse(gets.chomp)
-    @music_album << MusicAlbum.new(on_spotify, published_date)
+    puts 'Enter year of pulication for album: [yyyy/mm/dd]'
+    publish_date = Date.parse(gets.chomp)
+    @music_album << MusicAlbum.new(on_spotify, publish_date)
     write_data(@music_album, './storage/music_albums.json')
-    puts 'You music album was created successfully'
+    puts 'Created music album successfully'
   end
 
   def list_music_album
-    json_data = read_data('./storage/music_albums.json')
-    @music_album = JSON.parse(json_data)
+    @music_album = read_data('./data/music_albums.json')
     @music_album.each do |album|
       puts "Music_Album_ID: #{album['object_id']}  on_spotify: #{album['on_spotify']} publish_date; #{album['publish_date']}"
     end
   end
 
   def list_genre
-    json_data = read_data('./storage/genre.json')
-    @genre = JSON.parse(json_data)
+    @genre = read_data('./storage/genre.json')
     @genre.each do |genre|
       puts "GenreID: #{genre['id']} genre_name: #{genre['name']}"
     end
-  end  
+  end
+  
 end
