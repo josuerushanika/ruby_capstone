@@ -9,6 +9,8 @@ class App
   def initialize
     @books = []
     @labels = []
+    @music_album = []
+    @genre = []
   end
 
   def list_books
@@ -60,5 +62,12 @@ class App
     @books << book
     write_data(@books, './storage/book.json')
     print 'Book added succesfully'
+  end
+
+  def create_genre
+    puts 'Enter genre'
+    genre = gets.chomp
+    @genre << Genre.new(genre)
+    write_data(@genre, './storage/genre.json')
   end
 end
