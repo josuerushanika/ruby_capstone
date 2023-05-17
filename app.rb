@@ -84,7 +84,8 @@ class App
   end
 
   def list_music_album
-    @music_album = read_file('./storage/music_albums.json')
+    json_data = read_data('./storage/music_albums.json')
+    @music_album = JSON.parse(json_data)
     @music_album.each do |album|
       puts "Music_Album_ID: #{album['object_id']}  on_spotify: #{album['on_spotify']} publish_date; #{album['publish_date']}"
     end
