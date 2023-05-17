@@ -23,7 +23,7 @@ class Main
     app = App.new
     menu_selection = {
       '1' => :list_books, '2' => :list_music_album,
-      '3' => :list_movies, '4' => :list_genres,
+      '3' => :list_movies, '4' => :list_genre,
       '5' => :list_labels, '6' => :list_authors,
       '7' => :list_sources, '8' => :add_book,
       '9' => :add_music_album, '10' => :add_movie,

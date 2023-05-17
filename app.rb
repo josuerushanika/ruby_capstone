@@ -92,9 +92,10 @@ class App
   end
 
   def list_genre
-    @genre = read_file('./storage/genre.json')
+    json_data = read_data('./storage/genre.json')
+    @genre = JSON.parse(json_data)
     @genre.each do |genre|
-      puts "GenreID: #{genre['object_id']} genre_name: #{genre['name']}"
+      puts "GenreID: #{genre['id']} genre_name: #{genre['name']}"
     end
-  end
+  end  
 end
