@@ -2,12 +2,13 @@ require 'rspec'
 require_relative '../classes/book'
 require_relative '../classes/item'
 
-RSpec.describe Book do
-  describe '#can_be_archived?' do
-    context 'when cover_state is good' do
-      it 'returns true' do
-        book = Book.new('Publisher', 'good')
-        expect(book.can_be_archived?).to eq(true)
+describe Book do
+  describe '#initialize' do
+    context 'add a book' do
+      book = Book.new('Publisher', 'good')
+      it 'displays the publisher and the state' do
+        expect(book.publisher).to eq 'Publisher'
+        expect(book.cover_state).to eq 'good'
       end
     end
 
