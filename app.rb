@@ -82,4 +82,18 @@ class App
     write_data(@music_album, './storage/music_albums.json')
     puts 'You music album was created successfully'
   end
+
+  def list_music_album
+    @music_album = read_file('./storage/music_albums.json')
+    @music_album.each do |album|
+      puts "Music_Album_ID: #{album['object_id']}  on_spotify: #{album['on_spotify']} publish_date; #{album['publish_date']}"
+    end
+  end
+
+  def list_genre
+    @genre = read_file('./storage/genre.json')
+    @genre.each do |genre|
+      puts "GenreID: #{genre['object_id']} genre_name: #{genre['name']}"
+    end
+  end
 end
