@@ -1,3 +1,5 @@
+require './app'
+
 class Main
   def menu_options
     "
@@ -17,17 +19,13 @@ class Main
   end
 
   def choices
+    app = App.new
     menu_selection = {
-      '1' => :list_books,
-      '2' => :list_music_albums,
-      '3' => :list_movies,
-      '4' => :list_genres,
-      '5' => :list_labels,
-      '6' => :list_authors,
-      '7' => :list_sources,
-      '8' => :add_book,
-      '9' => :add_music_album,
-      '10' => :add_movie,
+      '1' => :list_books, '2' => :list_music_albums,
+      '3' => :list_movies, '4' => :list_genres,
+      '5' => :list_labels, '6' => :list_authors,
+      '7' => :list_sources, '8' => :add_book,
+      '9' => :add_music_album, '10' => :add_movie,
       '0' => :exit
     }
 
@@ -37,7 +35,7 @@ class Main
       break unless menu_selection.key?(input)
 
       action = menu_selection[input]
-      send(action) if action
+      app.send(action) if action
     end
   end
 
