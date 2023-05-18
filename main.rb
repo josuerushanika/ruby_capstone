@@ -5,14 +5,14 @@ class Main
     "
       1 - list all books
       2 - list all music albums
-      3 - list all movies
+      3 - list all games
       4 - list all genres
       5 - list all labels
       6 - list all authors
       7 - list all sources
       8 - Add a book
       9 - Add a music album
-      10 - Add a movie
+      10 - Add a game
       0 - Exit
       Please enter a number between 0 and 10 to choose an option
       "
@@ -22,10 +22,10 @@ class Main
     app = App.new
     menu_selection = {
       '1' => :list_books, '2' => :list_music_albums,
-      '3' => :list_movies, '4' => :list_genres,
+      '3' => :list_games, '4' => :list_genres,
       '5' => :list_labels, '6' => :list_authors,
       '7' => :list_sources, '8' => :add_book,
-      '9' => :add_music_album, '10' => :add_movie,
+      '9' => :add_music_album, '10' => :add_game,
       '0' => :exit
     }
 
