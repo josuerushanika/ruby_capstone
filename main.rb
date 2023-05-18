@@ -9,7 +9,6 @@ class Main
       4 - list all genres
       5 - list all labels
       6 - list all authors
-      7 - list all sources
       8 - Add a book
       9 - Add a music album
       10 - Add a game
@@ -26,9 +25,9 @@ class Main
       '1' => :list_books, '2' => :list_music_album,
       '3' => :list_games, '4' => :list_genre,
       '5' => :list_labels, '6' => :list_authors,
-      '7' => :list_sources, '8' => :add_book,
-      '9' => :add_music_album, '10' => :add_game,
-      '11' => :create_genre,'0' => :exit
+      '8' => :add_book, '9' => :add_music_album,
+      '10' => :add_game, '11' => :create_genre,
+      '0' => :exit
     }
 
     loop do

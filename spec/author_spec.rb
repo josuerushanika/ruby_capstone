@@ -3,9 +3,9 @@ require_relative '../classes/item'
 
 
 RSpec.describe Author do
-  let(:author) { Author.new("josue", "Obed") }
+  let(:author) { Author.new('josue', 'Obed') }
 
-  describe "#add_item" do
+  describe '#add_item' do
     it "adds a new item to the author's collection" do
       author.add_item
       expect(author.items.length).to eq(1)
@@ -14,4 +14,3 @@ RSpec.describe Author do
     end
   end
 end
-
