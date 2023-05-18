@@ -24,7 +24,7 @@ class App
     @books.each_with_index do |book, index|
       result += "#{index}) Name: #{book['publisher']} #{book['cover_state']}"
     end
-    print result
+    puts result
   end
 
   def list_labels
