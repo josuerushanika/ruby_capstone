@@ -13,6 +13,7 @@ class Main
       8 - Add a book
       9 - Add a music album
       10 - Add a game
+      11 - Add Author
       0 - Exit
       Please enter a number between 0 and 10 to choose an option
       "
@@ -26,6 +27,7 @@ class Main
       '5' => :list_labels, '6' => :list_authors,
       '7' => :list_sources, '8' => :add_book,
       '9' => :add_music_album, '10' => :add_game,
+      '11' =>:add_authors,
       '0' => :exit
     }
 
