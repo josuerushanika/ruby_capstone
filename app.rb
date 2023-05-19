@@ -72,18 +72,9 @@ class App
 
   def list_authors
     json_data = read_data('./storage/author.json')
-    @authors = begin
-      JSON.parse(json_data)
-    rescue StandardError
-      []
-    end
-    if @authors.empty?
-      puts 'No author added yet'
-      add_authors
-    else
-      @authors.each do |author|
-        puts "Author: #{author['first_name']}, #{author['last_name']}"
-      end
+    @authors = JSON.parse(json_data)
+    @authors.each do |author|
+      puts "Author: #{author['first_name']}, #{author['last_name']}"
     end
   end
 
